@@ -6,7 +6,7 @@ This repository implements from OSI layer 3 to above and is part of Limago. To g
 
 *Make sure that Vivado-HLS is in the PATH and you are running a supported version*
 
-- Vivado-HLS 2018.2 or Vivado-HLS 2018.3
+- Vivado-HLS 2018.2 to Vivado-HLS 2020.1 are supported
 
 If you are not sure what version is running execute the following command:
 
@@ -17,19 +17,19 @@ vivado_hls -version
 
 ## Getting Started
 
-Execute `make` in the root folder, a new folder named `synthesis_results` will be created. After the folder creation the project will launch the Synthesis of the different IP-Cores. Be patient this may take around 10 minutes.
+Execute `make` in the root folder, new folders named `synthesis_results_noHMB` and `synthesis_results_HMB` will be created. After the folder creation the project will launch the Synthesis of the different IP-Cores. Be patient this may take around 10 minutes.
 
 ## Explore the IP-Cores
 
-You can check the synthetized project under `synthesis_results`. For instance, if you want to open the TOE
+You can check the synthesized project under `synthesis_results_noHMB` or `synthesis_results_HMB`. The source code is the same, but the target FPGA is different. For instance, if you want to open the TOE
 
 ```
-vivado_hls -p synthesis_results/TOE_hls_prj/
+vivado_hls -p synthesis_results_noHBM/TOE_hls_prj/
 ```
 
 
 ## Citation
-If you use the TCP/IP stack or the checksum computation in your project please cite one of the following papers and/or link to the github project:
+If you use the TCP/IP stack or the checksum computation in your project please cite one of the following papers and/or link to the GitHub project:
 
 ```
 @inproceedings{sutter2018fpga,
